@@ -7,4 +7,4 @@ services:
     container_name: cron-requester
     restart: unless-stopped
     volumes:
-      - ./crons/jobs.cron:/crons/jobs.cron:ro
+      - ./crons/jobs.txt:/crons/jobs.cron:ro
