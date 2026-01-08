@@ -1,0 +1,15 @@
+# Without User-Agent
+# */1 * * * * curl -fsS https://example.com|| echo "quake check failed"
+
+*/1 * * * * curl \
+  -H "User-Agent: Cron Requester" \
+  https://example.com|| echo "quake check failed"
+
+
+# Hourly Example POST
+# 0 * * * * curl -X POST https://example.com/job
+
+# With Token Example
+# */15 * * * * curl \
+#   -H "Authorization: Bearer TOKEN" \
+#   https://api.example.com/task

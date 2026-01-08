@@ -1,0 +1,10 @@
+name: "Cron Requester"
+services:
+  cron-requester:
+    image: codedefective/cron-requester:latest
+    build: .
+    image:
+    container_name: cron-requester
+    restart: unless-stopped
+    volumes:
+      - ./crons/jobs.cron:/crons/jobs.cron:ro
