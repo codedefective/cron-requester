@@ -3,7 +3,7 @@ services:
   cron-requester:
     image: codedefective/cron-requester:latest
     build: .
-    image:
+    hostname: cron-requester
     container_name: cron-requester
     restart: unless-stopped
     volumes:
